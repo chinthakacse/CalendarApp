@@ -1,0 +1,37 @@
+﻿@model Octet.CalendarApp.Web.ViewModels.CalendarListViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<br />
+<br/>
+<div class="row">
+    <div class="col-md-4">
+        <button class="btn btn-success btn-lg" type="button">
+            Active Calendars <span class="badge">@Html.DisplayFor(model => model.ActiveCalendarCount)</span>
+        </button>
+    </div>
+    <div class="col-md-8">
+        <button class="btn btn-warning btn-lg" type="button">
+            Total Subscribers <span class="badge">@Html.DisplayFor(model => model.TotalSubscriberCount)</span>
+        </button>
+    </div>
+</div>
+<br />
+<br />
+
+<div class="row">
+    @{
+        foreach (var calendarItem in Model.CalendarItems)
+        {
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="@calendarItem.ImageUrl" alt="..." width="245" height="128"/>
+                    <div class="caption">
+                        <h3>@calendarItem.Name</h3>
+                        <p>@calendarItem.SubscriberCount Subscribers</p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    </div>

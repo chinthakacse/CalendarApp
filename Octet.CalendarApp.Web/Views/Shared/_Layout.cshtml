@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,300,700' rel='stylesheet' type='text/css'> @*google font*@
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Globo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Dashboard", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Help Center", "About", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="col-md-3">
+            <div id="wrapper">
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand">
+                            <a href="#">
+                                GENERAL
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-calendar"></i> Calendars</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-code"></i> Buttons</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gears"></i> Promotion Automation</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-globe"></i> International</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i> Subscribe Pages</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-clock-o"></i> Schedule Page</a>
+                        </li>
+                        <li class="sidebar-brand">
+                            <a href="#">
+                                SOCIAL
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i> Twitter Handles</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i> Facebook Page</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">@RenderBody()</div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

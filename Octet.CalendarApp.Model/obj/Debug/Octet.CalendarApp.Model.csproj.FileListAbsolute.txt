@@ -1,0 +1,4 @@
+H:\PersonalProjects\Tetran\1\Octet.CalendarApp\Octet.CalendarApp.Model\bin\Debug\Octet.CalendarApp.Model.dll
+H:\PersonalProjects\Tetran\1\Octet.CalendarApp\Octet.CalendarApp.Model\bin\Debug\Octet.CalendarApp.Model.pdb
+H:\PersonalProjects\Tetran\1\Octet.CalendarApp\Octet.CalendarApp.Model\obj\Debug\Octet.CalendarApp.Model.dll
+H:\PersonalProjects\Tetran\1\Octet.CalendarApp\Octet.CalendarApp.Model\obj\Debug\Octet.CalendarApp.Model.pdb
